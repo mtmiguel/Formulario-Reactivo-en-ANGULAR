@@ -1,0 +1,36 @@
+<div class="container">
+   
+   
+    <input type="text" placeholder="Resolution number" class="form-control mt-4" #name>
+
+    
+   
+
+
+
+    <button class="btn btn-primary" (click)="mostrar(name.value) "
+    >
+        mostrar
+    </button>
+
+    <div class="alert alert-success mt-4" *ngIf="openAlert; else mensaje">
+
+        <p>se ha enviado el mensaje</p>
+        <button class="btn btn-danger" (click)="openAlert=false">
+
+            x
+
+        </button>
+
+    </div>
+
+    <ng-template #mensaje>
+        <div class="alert-danger mt-4 mb-4">
+            mensaje de prueba
+        </div>
+
+    </ng-template>
+
+
+    
+</div>

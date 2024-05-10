@@ -1,0 +1,21 @@
+<input type="text" class="form-control"  #newday>
+<button class="btn btn-primary mt-4" (click)="dia= newday.value">
+que dia
+</button>
+
+
+<div  [ngSwitch]="dia">
+    <samp *ngSwitchCase="'1'" >lunes</samp>
+    <samp *ngSwitchCase="'2'">martes</samp>
+    <samp *ngSwitchCase="'3'">miercoles</samp>
+    <samp *ngSwitchCase="'4'">jueves</samp>
+    <samp *ngSwitchCase="'5'">viernes</samp>
+    <samp *ngSwitchCase="'6'">sabado</samp>
+    <samp *ngSwitchCase="'7'">domingo</samp>
+
+     <samp *ngSwitchDefault>no es un dia de la semana</samp> 
+     
+   
+
+
+</div>

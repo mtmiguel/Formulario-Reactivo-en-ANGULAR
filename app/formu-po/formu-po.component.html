@@ -1,0 +1,179 @@
+<div class="card">
+    <div class="card-body">
+
+
+        <form [formGroup]="FormUser" (ngSubmit)="procesar()">  <!-- esto lo qu me hace es ayudar a escuchar el evento para que me muestre por consola "(ngSubmit)="procesar()"-->
+
+
+
+            <div class="mb-2">
+                <label class="form-label">
+                    Resolution Number
+                </label>
+                <input type="number" formControlName="Rnumber" class="form-control"
+                    placeholder=" Please type the Resolution Number ">
+
+                <div class="alert alert-danger mt-2" [hidden]="Rnumber.valid || Rnumber.pristine">
+                    Resolution Number is required
+
+                </div>
+
+
+
+            </div>
+
+
+            <div class="mb-2">
+                <label class="form-label">
+                    Prefix
+                </label>
+                <input type="text" formControlName="Prefix" class="form-control"
+                    placeholder="Please type the Resolution Number Prefix">
+
+                <div class="alert alert-danger mt-2" [hidden]="Prefix.valid || Prefix.pristine">
+                    Prefix is required
+
+                </div>
+
+            </div>
+
+            <div class="mb-2">
+                <label class="form-label">
+                    Initial Range
+                </label>
+                <input type="number" formControlName="initialRange" class="form-control"
+                    placeholder="Please type the Initial Range">
+
+                <div class="alert alert-danger mt-2" [hidden]="initialRange.valid || initialRange.pristine">
+                    Initial Range is required
+                </div>
+            </div>
+
+
+
+            <div class="mb-2">
+                <label class="form-label">
+                    Final Range
+                </label>
+                <input type="number" formControlName="finalRange" class="form-control"
+                    placeholder="Please type the Final Range">
+
+                <div class="alert alert-danger mt-2" [hidden]="finalRange.valid || finalRange.pristine">
+                    Initial Range is required
+                </div>
+            </div>
+
+
+
+            <div class="mb-2">
+                <label class="form-label">
+                    Resolution Date
+                </label>
+                <input type="date" formControlName="resolutionDate" class="form-control">
+
+                <div class="alert alert-danger mt-2" [hidden]="resolutionDate.valid || resolutionDate.pristine">
+                    Date is required
+                </div>
+            </div>
+
+
+            <div class="mb-2">
+                <label class="form-label">
+                    Description
+                </label>
+                <textarea formControlName="description" class="form-control" rows="4"
+                    placeholder="Please enter the Description"></textarea>
+
+                <div class="alert alert-danger mt-2" [hidden]="description.valid || description.pristine">
+                    Description is required
+                </div>
+            </div>
+
+
+
+            <div class="mb-4">
+                <label class="form-label">
+                    Resolution File
+                </label>
+                <input type="file" formControlName="resolutionFile" class="form-control" accept=".pdf,.doc,.docx">
+
+                <div class="alert alert-danger mt-2" [hidden]="resolutionFile.valid || resolutionFile.pristine">
+                    Resolution File is required
+                </div>
+            </div>
+
+            <div class="mb-2">
+                <label class="form-label">
+                    Active
+                </label>
+
+                <input type="checkbox" formControlName="active" class="form-check-input f">
+
+                <div class="alert alert-danger mt-2" [hidden]="active.valid || active.pristine">
+                    Active is required
+                </div>
+            </div>
+
+
+            <div class="mb-2">
+                <label class="form-label">
+                    Vigency Month
+                </label>
+                <input type="number" formControlName="vigencyMonth" class="form-control"
+                    placeholder="Please type the Vigency Month">
+
+                <div class="alert alert-danger mt-2" [hidden]="vigencyMonth.valid || vigencyMonth.pristine">
+                    Vigency Month is required
+                </div>
+            </div>
+
+            <div class="mb-2">
+                <label class="form-label">
+                    Expiration Date
+                </label>
+                <input type="date" formControlName="expirationDate" class="form-control">
+
+                <div class="alert alert-danger mt-2" [hidden]="expirationDate.valid || expirationDate.pristine">
+                    Expiration Date is required
+                </div>
+            </div>
+
+            <div class="mb-2">
+                <label class="form-label">
+                    Resolution Type
+                </label>
+                <select formControlName="resolutionType" class="form-control">
+                    <option value="FE">FE</option>
+                    <option value="POS">POS</option>
+                </select>
+
+                <div class="alert alert-danger mt-2" [hidden]="resolutionType.valid || resolutionType.pristine">
+                    Resolution Type is required
+                </div>
+            </div>
+
+            <div class="mb-2">
+                <label class="form-label">
+                    Client Billing Electronic ID
+                </label>
+                <input type="number" formControlName="clientBillingElectronicId" class="form-control"
+                    placeholder="Please type the Client Billing Electronic ID">
+
+                <div class="alert alert-danger mt-2"
+                    [hidden]="clientBillingElectronicId.valid || clientBillingElectronicId.pristine">
+                    Client Billing Electronic ID is required
+                </div>
+            </div>
+
+
+
+
+
+
+            <button class="btn btn-primary" [disabled]="FormUser.invalid">
+                Send
+            </button>
+        </form>
+    </div>
+
+</div>
